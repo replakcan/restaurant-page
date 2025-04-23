@@ -1,0 +1,89 @@
+@font-face {
+  font-family: 'Altroned';
+  src: url(./font/StretchPro.otf);
+}
+
+@font-face {
+  font-family: 'Electroharmonix';
+  src: url(./font/Electroharmonix.otf);
+}
+
+html {
+  width: 100vw;
+}
+
+:root {
+  --padding: 1rem;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: min-content 1fr;
+}
+
+header {
+  font-family: Altroned;
+  grid-area: 1 / 1 / 2 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding);
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+#content {
+  color: white;
+  font-family: Electroharmonix;
+  font-size: xx-large;
+  grid-area: 2 / 1 / -1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: var(--padding);
+  background-image: url(./images/bg-img.png);
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#content > div {
+  width: 70%;
+  padding: var(--padding);
+  background-color: rgba(59, 128, 45, 0.2);
+  border: 10px solid rgba(240, 76, 76, 0.4);
+  border-radius: 1rem;
+  border-style: ridge;
+}
+
+.menu-div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+  color: darkkhaki;
+}
+
+.menu-card img {
+  object-fit: fill;
+  width: 200px;
+  height: 200px;
+  border-radius: 1rem;
+}
